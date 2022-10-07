@@ -12,15 +12,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val button = findViewById<Button>(R.id.startButton)
+        val button2 = findViewById<Button>(R.id.ruleButton)
 
         button.setOnClickListener {
             handleButtonPress()
         }
+        button2.setOnClickListener {
+            val intent = Intent(this, RuleActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun handleButtonPress(){
-        Log.d("!!!", "Start knappen har tryckts")
         val intent = Intent(this, CardActivity::class.java)
         startActivity(intent)
     }
+
+
+
+
+
+
+
 }
